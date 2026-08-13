@@ -4,11 +4,11 @@ import axios from "axios";
 const app = express();
 
 app.get("/users", async (req, res) => {
-    const { data } = await axios.get(
+    const { data,id} = await axios.get(
         "https://jsonplaceholder.typicode.com/users"
     );
 
-    const names = data.map(({ name }) => name);
+    const names = data.map(({ name}) => name);
 
     res.send(names.join("<br>"));
 });

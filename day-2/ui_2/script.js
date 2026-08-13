@@ -1,14 +1,17 @@
 async function getUrl() {
+    try {
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/users"
+        );
 
-    const response = await fetch(
-        "https://jsonplaceholder.typicode.com/users"
-    );
+        const data = await response.json();
 
-    const data = await response.json();
+        const users = data.map((user) => user.id + " " + user.name + " ");
 
-    const users = data.map((user) => user.id+" "+user.name+" ");
-
-    document.getElementById("name").innerText = users.join("\n");
+        document.getElementById("name").innerText = users.join("\n");
+    } catch(err){
+        document.getElementById("name").innerText = err;
+    }
 }
 
 getUrl();

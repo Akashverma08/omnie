@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>
+            Promise for burger
+        </title>
+
+        <body>
+            <h1>Burger,Meal,Fries</h1>
+            <hr>
+            <p id="demo"></p>
+            <h4 id="done"></h4>
+            <button onclick="order()">Order</button>
+
+            <script>
+                let burger=new Promise((res,rej)=>{
+                    setTimeout(()=>{
+                        res("Burger is ready");
+                    },3000);
+                })
+
+                let coke=new Promise((res,rej)=>{
+                    setTimeout(()=>{
+                        res("Coke is ready");
+                    },2000);
+
+                })
+
+                let fries=new Promise((res,rej)=>{
+                    setTimeout(()=>{
+                        res("Fries is ready");
+                    },1000);
+                })
+
+                function order(){
+                    Promise.all([burger,coke,fries])
+                        .then((result)=>{
+                            document.getElementById("demo").innerText=JSON.stringify(result);
+                        })
+                        .finally(()=>{
+                            document.getElementById("done").innerText="Order Done"
+                        })
+                }
+            </script>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,46 @@
+
+#Promise.all() runs multiple Promises together and gives the result only when ALL Promises are successfully completed.
+<html>
+    <head>
+        <title>promises calling</title>
+        <body>
+            <h1>Promises</h1>
+            <p id="demo"></p>
+            <p id="greet"></p>
+            <button onclick="handleLogin()">Click</button>
+            <script>
+
+                function loginPromise(){
+                    let name="Akash";
+                    let password="Akash$0401";
+                    return new Promise((resolve,reject)=>{
+                        setTimeout(()=>{
+                            resolve({login:true,id:100})
+                        },3000);
+                    })
+
+
+                }
+
+                function handleToken(){
+                    
+                    return new Promise((resolve,reject)=>{
+                        setTimeout(()=>{
+                            resolve({token:"$%$526526*^$%%$"})
+                        },1000)
+                    })
+                }
+
+                function handleLogin(){
+                    const loginResult=loginPromise();
+                    const handleKey=handleToken();
+                    Promise.all([loginResult,handleKey]).then((res)=>{
+                        document.getElementById("demo").innerText=JSON.stringify(res);
+                    })
+                }
+                
+
+            </script>
+        </body>
+    </head>
+</html>
