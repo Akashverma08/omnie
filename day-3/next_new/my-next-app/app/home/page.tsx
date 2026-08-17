@@ -15,7 +15,7 @@ export default async function Page() {
                 </thead>
 
                 <tbody>
-                    {users.map((user) => (
+                    {users.map((user: any) => (
                         <tr key={user.id}>
                             <td>{user.id}</td>
                             <td>{user.name}</td>

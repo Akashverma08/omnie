@@ -1,0 +1,30 @@
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.content {
+  padding: 20px;
+  min-height: calc(100vh - 130px);
+}
+
+.footer {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}
