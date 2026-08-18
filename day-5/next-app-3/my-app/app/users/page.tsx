@@ -15,7 +15,7 @@ export default async function User() {
         redirect("/login");
     }
 
-    const filePath = path.join(process.cwd(),"data","data.json");
+    const filePath = path.join(process.cwd(), "data", "data.json");
 
     const fileData = fs.readFileSync(filePath, "utf-8");
 
@@ -24,7 +24,7 @@ export default async function User() {
     return (
         <div className="users-page">
             <h1>Users</h1>
-                        <div className="add-user">
+            <div className="add-user">
                 <Button
                     href="/users/add"
                     variant="contained"
