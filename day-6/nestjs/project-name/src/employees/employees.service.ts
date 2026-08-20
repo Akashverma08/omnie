@@ -4,11 +4,8 @@ import { UpdateEmployeeDto } from './dto/update-employee.dto';
 
 @Injectable()
 export class EmployeesService {
-  create(createEmployeeDto: CreateEmployeeDto) {
-    return 'This action adds a new employee';
-  }
-
-  private employees = [
+  
+  private employees:any = [
     {
       id: 21,
       name: "Akash",
@@ -45,32 +42,38 @@ export class EmployeesService {
       rank: 5
     }
   ]
-
+  
+  create(createEmployeeDto: CreateEmployeeDto) {
+    const newEmployee = {
+      id: this.employees.length + 21,
+      ...createEmployeeDto,
+    };
+    this.employees.push(newEmployee);
+    return newEmployee;
+  }
   findAll() {
     return this.employees;
   }
 
   findOne(id: number) {
-    return this.employees.find(employee=> employee.id===id);
+    return this.employees.find(employee => employee.id === id);
   }
 
   update(id: number, updateEmployeeDto: UpdateEmployeeDto) {
-    const employee= this.employees.find(employee=> employee.id===id);
-    if(!employee){
+    const employee = this.employees.find(employee => employee.id === id);
+    if (!employee) {
       return "employee not found";
     }
 
-    Object.assign(employee,updateEmployeeDto);
+    Object.assign(employee, updateEmployeeDto);
     return employee;
   }
 
   remove(id: number) {
-    const index=this.employees.findIndex(employee=> employee.id===id);
-    if(index===-1){
-      return "User Noyt found";
+    
 
-    }
+    this.employees = this.employees.filter(employee => employee.id !== id)
 
-    return this.employees.splice(index,1)
+    return this.employees;
   }
 }

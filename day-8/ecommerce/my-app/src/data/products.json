@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Wireless Mouse",
+        "price": 29.99,
+        "image": "https://images.unsplash.com/photo-1527814050087-3793815479db",
+        "description": "Comfortable wireless mouse for everyday use."
+    },
+    {
+        "id": 2,
+        "name": "Keyboard",
+        "price": 49.99,
+        "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+        "description": "Mechanical keyboard with comfortable keys."
+    },
+    {
+        "id": 3,
+        "name": "Headphones",
+        "price": 79.99,
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+        "description": "High quality headphones with clear sound."
+    },
+    {
+        "id": 4,
+        "name": "Smart Watch",
+        "price": 99.99,
+        "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+        "description": "Smart watch with modern features."
+    },
+    {
+        "id": 5,
+        "name": "Laptop",
+        "price": 799.99,
+        "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+        "description": "Powerful laptop for work and entertainment."
+    },
+    {
+        "id": 6,
+        "name": "Gaming Mouse",
+        "price": 59.99,
+        "image": "https://images.unsplash.com/photo-1563297007-0686b7003af7",
+        "description": "High precision gaming mouse."
+    },
+    {
+        "id": 7,
+        "name": "Wireless Keyboard",
+        "price": 44.99,
+        "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+        "description": "Comfortable wireless keyboard for work and gaming."
+    },
+    {
+        "id": 8,
+        "name": "USB Headset",
+        "price": 39.99,
+        "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90",
+        "description": "Clear sound USB headset with comfortable ear cushions."
+    },
+    {
+        "id": 9,
+        "name": "Gaming Monitor",
+        "price": 199.99,
+        "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf",
+        "description": "High resolution gaming monitor with smooth display."
+    },
+    {
+        "id": 10,
+        "name": "Laptop Stand",
+        "price": 34.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjWREgxMAvrS0nrMWczPQmBNkxOOwiPbW_Ii5YMYokZQ&s=10",
+        "description": "Adjustable laptop stand for a comfortable working position."
+    },
+    {
+        "id": 11,
+        "name": "Webcam",
+        "price": 49.99,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7GQVFrEoexbmJH7_Ox6amBfjdm5_orDdSN0KkNnaNdtj6Bi7uwE_pZhg&s=10",
+        "description": "Full HD webcam for online meetings and video calls."
+    },
+    {
+        "id": 12,
+        "name": "Bluetooth Speaker",
+        "price": 69.99,
+        "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1",
+        "description": "Portable Bluetooth speaker with powerful sound."
+    }
+]

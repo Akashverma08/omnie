@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    background:#222;
+    color:#fff;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff9800;
+}
+
+.cart{
+    position:relative;
+    cursor:pointer;
+    font-size:28px;
+}
+
+.cart i{
+    color:#fff;
+}
+
+.cart-count{
+    position:absolute;
+    top:-10px;
+    right:-10px;
+    width:22px;
+    height:22px;
+    background:red;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+    font-weight:bold;
+    border:2px solid #222;
+}
+
+@media(max-width:768px){
+    header{
+        padding:15px 20px;
+    }
+
+    nav{
+        gap:15px;
+    }
+
+    nav a{
+        font-size:16px;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+}
+
+
+.product {
+    background: white;
+
+    margin: 30px 50px;
+    padding: 40px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px;
+}
+
+.product-image {
+    width: 50%;
+    text-align: center;
+}
+
+.product-image img {
+    width: 350px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.product-info {
+    width: 50%;
+}
+
+.product-info h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.product-info h2 {
+    color: #d85c50;
+    margin-bottom: 15px;
+}
+
+.product-info p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.product-info button {
+    background: #5682a5;
+    color: white;
+
+    border: none;
+    padding: 12px 25px;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.product-info button:hover {
+    background: #416b8b;
+}
