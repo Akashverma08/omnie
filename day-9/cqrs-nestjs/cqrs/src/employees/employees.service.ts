@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { CreateEmployeeCommand } from './commands/create-employee.command';
 
 @Injectable()
 export class EmployeesService {
@@ -12,18 +13,31 @@ export class EmployeesService {
     },
   ];
 
-  create(employeeData: any) {
-    const newEmployee = {
-      id: this.employees.length + 1,
-      ...employeeData,
+  create(command: CreateEmployeeCommand) {
+    const employee = {
+      id: Date.now(),
+      name: command.name,
+      department: command.department,
+      project: command.project,
+      rank: command.rank,
     };
 
-    this.employees.push(newEmployee);
+    if (command.index >=0) {
+      this.employees.splice(command.index, 0, employee);
+    } else {
+      this.employees.push(employee);
+    }
 
-    return newEmployee;
+    return this.employees;
   }
 
-    findAll() {
-    return this.employees;
+  findAll() {
+    if(this.employees.length===0){
+        return "employee not found";
+    }else{
+        return this.employees;
+
+    }
+    
   }
 }
